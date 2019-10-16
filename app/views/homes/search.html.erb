@@ -1,6 +1,6 @@
 <%= render "categories" %>
-<h4><%= @category.description %></h4>
 <div class="result">
+  <h4>Resultados</h4>
   <% @recipes.each do |recipe| %>
   <%= link_to homes_comments_path(record_key_for_dom_id(recipe)) do %>
   <div class="recipe">

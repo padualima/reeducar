@@ -10,8 +10,9 @@
   </div>
 </div>
 <h4>Explorer</h4>
-<div class="explorer">
+<div class="result">
   <% @recipes.each do |recipe| %>
+  <%= link_to homes_comments_path(record_key_for_dom_id(recipe)) do %>
   <div class="recipe">
     <%= image_tag "macarrao" %>
     <div class="recipe-info">
@@ -29,5 +30,6 @@
       </span>
     </div>
   </div>
+  <% end %>
   <% end %>
 </div>
