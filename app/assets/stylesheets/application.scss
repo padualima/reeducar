@@ -18,16 +18,55 @@ body {
   .body{
     justify-content: center;
     align-items: center;
-    padding-top: 23%;
+    padding-top: 1vh;
     .card{
       border-radius: 23px;
-      height: 78vh;
+      height: 79vh;
+      background: $background;
+      .categories{
+        form {
+          display: flex;
+          overflow-x: scroll;
+          flex-direction:row;
+        }
+        .category {
+          box-shadow: 0 2px 2px 0 #00000036;
+
+        }
+      }
     }
     .categories{
       margin: 0 20px 0 20px;
       .category {
         box-shadow: 0 2px 2px 0 #00000036;
+        padding: 0 8px;
+        margin: 0 5px;
       }
+    }
+  }
+  .nav-home{
+    .nav-items{
+      display: inline-flex;
+      width: 100%;
+      justify-content:space-evenly;
+      text-align: right;
+      padding-bottom: 4px;
+      .nav-logo{
+        text-align: center;
+        display: block;
+        margin-left: 30%;
+      }
+      .nav-img{
+        font-size: 20px;
+        margin-left: 18%;
+      }
+    }
+    .form-group{
+      .search{
+        border-radius: 50px;
+        width: 75%
+      }
+      margin-bottom: 5px;
     }
   }
 }
@@ -45,16 +84,16 @@ body {
     }
     width: 100%;
     .text-center{
-        a{
-          height: 15%;
-          margin: auto;
-          width: 40%;
-        }
-        .btn {
-          width: 40%;
-          height: 15%;
-          margin: auto;
-        }
+      a{
+        height: 15%;
+        margin: auto;
+        width: 40%;
+      }
+      .btn {
+        width: 40%;
+        height: 15%;
+        margin: auto;
+      }
     }
     .links{
       margin: 0 0 0 20px
@@ -149,6 +188,30 @@ body {
   //   background-color: #3b5998;
   // }
 
+  @media (max-width: 350px)
+  {
+    body{
+      .body{
+        .card{
+          border-radius: 23px;
+          height: 76vh;
+        }
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $color_primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $color_secondary;
+}
   /* Fallback for Edge
   -------------------------------------------------- */
 

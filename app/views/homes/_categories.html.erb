@@ -1,0 +1,8 @@
+<h4>Categorias</h4>
+<div class="categories">
+  <%= form_tag homes_categories_path, method: :get do%>
+  <% @categories.each do |category| %>
+  <%= button_tag(category, { value: category, class: "btn category btn-light" }) %>
+  <% end %>
+  <% end %>
+</div>

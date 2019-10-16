@@ -1,2 +1,23 @@
-<h1>Homes#categories</h1>
-<p>Find me in app/views/homes/categories.html.erb</p>
+<%= render "categories" %>
+<h4><%= @category.description %></h4>
+<div class="result">
+  <% @recipes.each do |recipe| %>
+  <div class="recipe">
+    <%= image_tag "macarrao" %>
+    <div class="recipe-info">
+      <span class="recipe-name">
+        <%= recipe.name %>
+      </span>
+      <span class="recipe-category">
+        <%= recipe.category.description%>
+      </span>
+      <span class="user-name">
+        @<%= recipe.user.username %>
+      </span>
+      <span class="recipe-date">
+        <%= l recipe.created_at, format: :short %>
+      </span>
+    </div>
+  </div>
+  <% end %>
+</div>

@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 gem 'pry'
 gem 'devise'
+gem 'rails-i18n'
+gem 'tty-spinner'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

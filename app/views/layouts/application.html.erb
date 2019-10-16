@@ -11,6 +11,11 @@
 
 <body>
   <div class="body">
+    <% if current_user %>
+    <%= render "layouts/shared/nav" %>
+    <% else %>
+    <%= render "layouts/shared/nav-logo" %>
+    <% end %>
     <div class="card">
       <%= yield %>
     </div>
