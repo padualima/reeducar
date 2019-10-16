@@ -20,6 +20,8 @@ body {
     align-items: center;
     padding-top: 1vh;
     .card{
+      overflow-y: scroll;
+      overflow-x: hidden;
       border-radius: 23px;
       height: 79vh;
       background: $background;
@@ -32,6 +34,57 @@ body {
         .category {
           box-shadow: 0 2px 2px 0 #00000036;
 
+        }
+      }
+      .relevants{
+        .carousel{
+          display: flex;
+          overflow-x: scroll;
+          .relevant{
+            img{
+              width: 190px;
+            }
+          }
+        }
+      }
+      .explorer {
+        margin: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .recipe {
+          display: flex;
+          border-radius: 20px;
+          width: 90%;
+          box-shadow: 0 0 15px 0 #00000036;
+          flex-direction: row;
+          background: white;
+          align-items: center;
+          margin: 0 0 3% 3%;
+          .recipe-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .recipe-name {
+              font-weight: bold;
+            }
+            .recipe-category {
+              font-weight: bold;
+              color: $color_primary;
+            }
+            .recipe-user {
+              margin-top: 10px;
+            }
+            .user-name {
+              font-weight: bold;
+            }
+          }
+          img {
+            width: 38%;
+            margin-right: 10px;
+            border-radius: 20px 0 0 20px;
+          }
         }
       }
     }
@@ -195,23 +248,31 @@ body {
         .card{
           border-radius: 23px;
           height: 76vh;
+          .relevants{
+            .carousel{
+              .relevant{
+                img{
+                  width: 120px;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
-
   ::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
-}
+    width: 5px;
+    height: 5px;
+  }
 
-::-webkit-scrollbar-thumb {
-	background: $color_primary;
-}
+  ::-webkit-scrollbar-thumb {
+    background: $color_primary;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-	background: $color_secondary;
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background: $color_secondary;
+  }
   /* Fallback for Edge
   -------------------------------------------------- */
 

@@ -1,6 +1,7 @@
 class HomesController < ApplicationController
   before_action :prepare_categories, only: [:index, :categories]
   def index
+    @recipes = Recipe.all.order("created_at DESC")
   end
 
   def categories

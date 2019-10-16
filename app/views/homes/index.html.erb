@@ -1,1 +1,33 @@
 <%= render "categories" %>
+<h4>Relevantes</h4>
+<div class="relevants">
+  <div class="carousel">
+    <% @recipes.each do |recipe| %>
+    <div class="relevant">
+      <%= image_tag "quinoa" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<h4>Explorer</h4>
+<div class="explorer">
+  <% @recipes.each do |recipe| %>
+  <div class="recipe">
+    <%= image_tag "macarrao" %>
+    <div class="recipe-info">
+      <span class="recipe-name">
+        <%= recipe.name %>
+      </span>
+      <span class="recipe-category">
+        <%= recipe.category.description%>
+      </span>
+      <span class="user-name">
+        @<%= recipe.user.username %>
+      </span>
+      <span class="recipe-date">
+        <%= l recipe.created_at, format: :short %>
+      </span>
+    </div>
+  </div>
+  <% end %>
+</div>
