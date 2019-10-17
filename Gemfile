@@ -35,7 +35,6 @@ gem 'rails-i18n'
 gem 'tty-spinner'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
-gem 'serviceworker-rails'
 gem 'platform-api'
 # gem 'capistrano-rails', group: :development
 
