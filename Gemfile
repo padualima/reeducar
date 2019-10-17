@@ -36,6 +36,7 @@ gem 'tty-spinner'
 gem 'faker'
 gem 'bootstrap'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
