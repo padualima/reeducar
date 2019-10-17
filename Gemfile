@@ -34,7 +34,6 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'tty-spinner'
 gem 'faker'
-gem 'bootstrap'
 
 
 # Use Capistrano for deployment
