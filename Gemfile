@@ -33,7 +33,7 @@ gem 'pry'
 gem 'devise'
 gem 'rails-i18n'
 gem 'tty-spinner'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'platform-api'
 # gem 'capistrano-rails', group: :development
