@@ -14,23 +14,26 @@ class RecipesController < ApplicationController
 
   # GET /recipes/new
   def new
-    @recipe = Recipe.new
+    prepare_form
+    @recipe = Recipe.new()
   end
 
   # GET /recipes/1/edit
   def edit
+    prepare_form
   end
 
   # POST /recipes
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-
+    @recipe.user = current_user
     respond_to do |format|
       if @recipe.save
-        format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Recipe was successfully created.' }
         format.json { render :show, status: :created, location: @recipe }
       else
+        prepare_form
         format.html { render :new }
         format.json { render json: @recipe.errors, status: :unprocessable_entity }
       end
@@ -45,6 +48,7 @@ class RecipesController < ApplicationController
         format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
         format.json { render :show, status: :ok, location: @recipe }
       else
+        prepare_form
         format.html { render :edit }
         format.json { render json: @recipe.errors, status: :unprocessable_entity }
       end
@@ -69,6 +73,10 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:user_id, :category_id, :name, :description, :preparation)
+      params.require(:recipe).permit(:user_id, :category_id, :name, :description, :preparation, :image)
+    end
+
+    def prepare_form
+      @categories = Category.all.map { |c| [c.description, c.id]  }
     end
 end

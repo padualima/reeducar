@@ -4,7 +4,7 @@
   <div class="carousel">
     <% @recipes.each do |recipe| %>
     <div class="relevant">
-      <%= image_tag "quinoa" %>
+      <%= image_tag recipe.image %>
     </div>
     <% end %>
   </div>
@@ -14,7 +14,7 @@
   <% @recipes.each do |recipe| %>
   <%= link_to homes_comments_path(record_key_for_dom_id(recipe)) do %>
   <div class="recipe">
-    <%= image_tag "macarrao" %>
+    <%= image_tag recipe.image %>
     <div class="recipe-info">
       <span class="recipe-name">
         <%= recipe.name %>

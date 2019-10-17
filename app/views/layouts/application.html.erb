@@ -19,6 +19,9 @@
     <div class="card">
       <%= yield %>
     </div>
+    <% if current_user %>
+    <%= render "layouts/shared/footer" %>
+    <% end %>
   </div>
 </body>
 </html>
