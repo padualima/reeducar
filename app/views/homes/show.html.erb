@@ -1,17 +1,11 @@
-<%= render "categories" %>
-<h4>Relevantes</h4>
-<div class="relevants">
-  <div class="carousel">
-    <% @recipes.each do |recipe| %>
-    <%= link_to homes_comments_path(record_key_for_dom_id(recipe)) do %>
-    <div class="relevant">
-      <%= image_tag recipe.image %>
-    </div>
-    <% end %>
-    <% end %>
+<div class="result">
+  <h4>Perfil</h4>
+  <div class="profile">
+    <%= image_tag @user.image, style: "width:35%; border-radius: 50%;margin-left: 31%" %>
+    <h4><%= @user.name %></h4>
+    <h5><%= @user.username %></h5>
   </div>
 </div>
-<h4>Explorer</h4>
 <div class="result">
   <% @recipes.each do |recipe| %>
   <%= link_to homes_comments_path(record_key_for_dom_id(recipe)) do %>
@@ -25,10 +19,7 @@
         <%= recipe.category.description%>
       </span>
       <span class="user-name">
-        <%= link_to homes_show_path(recipe.user) do %>
         @<%= recipe.user.username %>
-        <% end %>
-
       </span>
       <span class="recipe-date">
         <%= l recipe.created_at, format: :short %>

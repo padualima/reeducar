@@ -5,6 +5,9 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="form-label-group">
+    <%= f.file_field :image, { class: "btn"} %>
+  </div>
+  <div class="form-label-group">
     <%= f.text_field :name, id:"inputEmail", class:"form-control",
     placeholder:"Name", required: true, autofocus: true  %>
     <%= f.label :name, for: "inputEmail" %>

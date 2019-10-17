@@ -10,11 +10,17 @@
         <%= @recipe.category.description%>
       </span>
       <span class="user-name">
+        <%= link_to homes_show_path(@recipe.user) do %>
         @<%= @recipe.user.username %>
+        <% end %>
       </span>
       <span class="recipe-date">
         <%= l @recipe.created_at, format: :short %>
       </span>
+    </div>
+    <div class="text-right">
+      <div style="font-size:25px;"><i class="fas fa-star" style="color: yellow;"></i> <%= rand(5.0) %> </div>
+      <i class="fas fa-thumbs-up" style="font-size:25px;"></i>
     </div>
   </div>
 </div>
@@ -33,60 +39,17 @@
     </div>
   </div>
 </div>
+
+<% rand(6).times do %>
 <div class="result">
   <div class="recipe">
-    <%= image_tag "macarrao" %>
+    <%= image_tag "macarrao", style: "border-radius: 50%; margin: 4px; width:28%;" %>
     <div class="recipe-info">
-      <span class="recipe-name">
-        <%= @recipe.name %>
-      </span>
-      <span class="recipe-category">
-        <%= @recipe.category.description%>
-      </span>
       <span class="user-name">
-        @<%= @recipe.user.username %>
-      </span>
-      <span class="recipe-date">
-        <%= l @recipe.created_at, format: :short %>
+        @<%= @users.sample.username %>
+        <p>Lorem Ipsum é simplesmente uma simulação</p>
       </span>
     </div>
   </div>
 </div>
-<div class="result">
-  <div class="recipe">
-    <%= image_tag "macarrao" %>
-    <div class="recipe-info">
-      <span class="recipe-name">
-        <%= @recipe.name %>
-      </span>
-      <span class="recipe-category">
-        <%= @recipe.category.description%>
-      </span>
-      <span class="user-name">
-        @<%= @recipe.user.username %>
-      </span>
-      <span class="recipe-date">
-        <%= l @recipe.created_at, format: :short %>
-      </span>
-    </div>
-  </div>
-</div>
-<div class="result">
-  <div class="recipe">
-    <%= image_tag "macarrao" %>
-    <div class="recipe-info">
-      <span class="recipe-name">
-        <%= @recipe.name %>
-      </span>
-      <span class="recipe-category">
-        <%= @recipe.category.description%>
-      </span>
-      <span class="user-name">
-        @<%= @recipe.user.username %>
-      </span>
-      <span class="recipe-date">
-        <%= l @recipe.created_at, format: :short %>
-      </span>
-    </div>
-  </div>
-</div>
+<% end %>

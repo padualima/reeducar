@@ -9,11 +9,20 @@ $background: image-url("background.png") center center fixed;
 body {
   background: rgb(88,179,138);
   font-family: $font1;
+  .card-body{
+    padding: 0;
+  }
   h4{
     font-weight: 300;
     font-size: 22px;
     text-align: center;
     padding: 6px;
+  }
+
+  h5{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
   }
   .body{
     justify-content: center;
@@ -22,7 +31,7 @@ body {
     .card{
       overflow-y: scroll;
       overflow-x: hidden;
-      border-radius: 23px;
+      border-radius: 24px;
       height: 79vh;
       background: $background;
       .categories{
@@ -50,14 +59,15 @@ body {
       .new-recipe{
         .card{
           background: white;
-          box-shadow: 0 2px 15px #00000036;
-          border-radius: 25px;
-
         }
       }
       .result {
         a{
           text-decoration: none;
+          color: $color_primary;
+          width: 19vh;
+          font-weight: bold;
+          font-size: 18px;
         }
         margin: 10px;
         flex-direction: column;
@@ -77,6 +87,7 @@ body {
             span{
               color: black;
             }
+            margin-right: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -95,8 +106,8 @@ body {
             }
           }
           img {
-            width: 38%;
-            margin-right: 10px;
+            width: 18vh;
+            padding-right: 20px;
             border-radius: 20px 0 0 20px;
           }
         }
@@ -136,9 +147,11 @@ body {
       margin-bottom: 5px;
     }
   }
-  .row{
+  .footer-bar{
     font-size: 5vh;
+    display: flex;
     padding-top: 1%;
+    justify-content: space-between;
     .no-float{
       margin: 0 65px;
       color: white;
@@ -153,8 +166,6 @@ body {
     margin-left: 22vh;
   }
 }
-
-
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
@@ -276,6 +287,22 @@ body {
   @media (max-width: 350px)
   {
     body{
+      .footer-bar{
+        font-size: 5vh;
+        display: flex;
+        justify-content: space-between;
+        .no-float{
+          margin: 0 65px;
+          color: white;
+        }
+      }
+      .float{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0%;
+      }
       .body{
         .card{
           border-radius: 23px;

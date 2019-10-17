@@ -13,11 +13,17 @@
         <%= recipe.category.description%>
       </span>
       <span class="user-name">
+        <%= link_to homes_show_path(recipe.user) do %>
         @<%= recipe.user.username %>
+        <% end %>
       </span>
       <span class="recipe-date">
         <%= l recipe.created_at, format: :short %>
       </span>
+    </div>
+    <div class="text-right">
+      <div style="font-size:25px;"><i class="fas fa-star" style="color: yellow;"></i> <%= rand(5.0) %> </div>
+      <i class="fas fa-thumbs-up" style="font-size:25px;"></i>
     </div>
   </div>
   <% end %>
