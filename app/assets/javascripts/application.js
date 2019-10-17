@@ -13,8 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= popper.js/dist/popper
-//= require jquery
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require @fortawesome/fontawesome-free/js/all
-//= require bootstrap/dist/js/bootstrap
-//= require serviceworker-companion
