@@ -34,9 +34,6 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'tty-spinner'
 gem 'faker'
-
-
-# Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
