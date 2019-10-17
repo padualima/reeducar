@@ -33,7 +33,9 @@ gem 'pry'
 gem 'devise'
 gem 'rails-i18n'
 gem 'tty-spinner'
-gem 'faker'
+gem 'jquery-rails'
+gem 'serviceworker-rails'
+gem 'platform-api'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
