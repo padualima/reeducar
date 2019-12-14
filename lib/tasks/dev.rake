@@ -25,7 +25,8 @@ namespace :dev do
     User.create!(
       email: "user@admin.com",
       password: DEFAULT_PASSWORD,
-      password_confirmation: DEFAULT_PASSWORD
+      password_confirmation: DEFAULT_PASSWORD,
+      image: File.open('/Users/padualima/Desktop/lays/imagens/Profile/IMG_2553.jpg')
     )
   end
 end

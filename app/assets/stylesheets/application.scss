@@ -1,5 +1,4 @@
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import "@fortawesome/fontawesome-free/css/all";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 $font1: 'Raleway', sans-serif;
@@ -187,15 +186,17 @@ body {
     }
     width: 100%;
     .text-center{
-      a{
-        height: 15%;
-        margin: auto;
-        width: 40%;
-      }
-      .btn {
-        width: 40%;
-        height: 15%;
-        margin: auto;
+      .btn-group{
+        a{
+          height: 15%;
+          margin: auto;
+          width: auto;
+        }
+        .btn {
+          width: auto;
+          height: 15%;
+          margin: auto;
+        }
       }
     }
     .links{
